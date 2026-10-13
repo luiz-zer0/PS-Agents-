@@ -10,6 +10,20 @@ Stochastic-The result oof travelling is't completely predictable due ot traffic,
 Sequential-The environment has variety of aspects beyond control of the agents
 Dynamic-the environment can change while agent is selecting an action making the agent consult the environment before acting
 
+## number 2
+
+1. Directed graph
+Kenya’s highway network is represented as a directed graph \(G=(V,E)\), where vertices (\(V\)) represent towns and cities, while edges (\(E\)) represent road connections. The network covers the Nairobi, Central Highlands, Rift Valley and Lake Victoria Basin regions.
+![alt text](Directed-Graph.png)
+
+The agent uses the graph to identify possible routes from Nairobi to Kisumu. Road connections can be assigned costs based on distance, traffic or travel time to compare alternative routes.
+
+2. Search tree using abstraction
+Abstraction simplifies the search by grouping towns into major travel corridors before expanding promising routes into individual towns. This reduces the complexity of searching the entire highway network.
+![alt text](Directed-Graph.png)
+
+For example, the agent can explore the route Nairobi → Naivasha → Gilgil → Nakuru → Kericho → Kisumu. It can use A* search to select a suitable route based on the cost already travelled and the estimated remaining cost to the destination.
+
 ## number 3
 1. Setting up the problem
 The trailer has to get from Nairobi to Kisumu, using the highway network we mapped in Question 2. In that map, every town is a node and every highway between two towns is an edge. So the problem boils down to this: pick a sequence of towns that gets the trailer from Nairobi to Kisumu with the least distance driven.
